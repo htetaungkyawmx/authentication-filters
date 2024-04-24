@@ -19,5 +19,6 @@ public class RequestValidationFilter implements Filter {
             httpResponse.setStatus(HttpServletResponse.SC_BAD_REQUEST);
             return;
         }
+        filterChain.doFilter(httpRequest,httpResponse);
     }
 }
